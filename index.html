@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body style="background-color:#69D2E7">
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        EDUVATION - ACADEMY
+                    </a>
+                </li>
+                <li>
+                    <a href="#">HOME</a>
+                </li>
+                <li>
+                    <a href="#">ABOUT ME</a>
+                </li>
+                <li>
+                    <a href="#">WHY ME ?</a>
+                </li>
+                <li>
+                    <a href="#">SERVICES</a>
+                </li>
+                <li>
+                    <a href="#">PROCESS</a>
+                </li>
+                <li>
+                    <a href="#">TESTIMONIALS</a>
+                </li>
+                <li>
+                    <a href="#">BLO</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper" >
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                     	<a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><span class="glyphicon glyphicon-list" aria-hidden="true"></span></a> 
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script>
+    	$(function(){
+    		var text = ["Will your school give you access to top recruiters?","I help you select schools based on your goals.","Is your MBA application really selling you?","I teach you how to market yourself.","You get just one shot. Aspire for perfection.","I offer unlimited essay reviews and edits.","Interviewers spend 30 seconds on a CV.","I help you construct a resumé that stands out.","Practice makes perfect.","I offer unlimited hours of interview training.","Will your school give you access to top recruiters?","I help you select schools based on your goals."];
+    		//alert(text.length);
+    		var i = 0;
+    		setInterval(function(){
+  	 			if(i == 12){
+  	 				
+  	 				i = 0;
+  	 			}	
+  	 			$("#changeOne").text(text[i]);
+  	 			$("#changeTwo").text(text[i+1]);
+  	 			i = i + 2; 
+  	 		
+		}, 3000);
+	});
+    </script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
